@@ -1,0 +1,16 @@
+extends ../layouts/common
+
+block content
+    h1 transfer cmmmmmm
+
+    form( method="POST")
+        input(type="hidden", name="_csrf", value=csrfToken)
+        .form-group
+            lable(class="form-label", for="account") Account
+            Input#account(type='text',name="account", class='form-control mt-2')
+
+        .form-group
+            lable(class="form-label", for="amount") Amount
+            Input#amount(type='number',name="amount", class='form-control mt-2')
+
+        button(class="btn btn-primary mt-2") Transfer
